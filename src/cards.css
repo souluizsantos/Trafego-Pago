@@ -1,0 +1,62 @@
+.sectioncard {
+    padding: 10% 0%;
+    justify-self: center;
+    /* centraliza os cards */
+}
+
+.align-Cards {
+    display: inline-flex;
+    /* coloca os cards lado a lado */
+    width: 300px;
+    height: 380px;
+    background-color: #f5f5f5;
+    border-radius: 5%;
+}
+
+.align-Cards {
+
+    border: 2px solid #00000033;
+    /* borda preta */
+    border-radius: 10px;
+
+    box-shadow: 0 0 15px #7793825e;
+    /* sombra projetada */
+    text-align: left;
+}
+
+.card {
+    padding: 15% 37px;
+}
+
+.h1card {
+    font-weight: 900;
+}
+
+.h2card {
+
+    width: 100%;
+    text-align: start;
+
+}
+
+.pcard {
+    text-align: start;
+    width: 90%;
+}
+
+@media (max-width:600px) {
+    .sectioncard {
+    padding: 10% 8%;
+    justify-self: center;
+    /* centraliza os cards */
+}
+
+.align-Cards {
+    display: grid; /* coloca os cards lado a lado */
+    width: 300px;
+    height: 380px;
+    background-color: #f5f5f5;
+    border-radius: 5%;
+}
+
+}

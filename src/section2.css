@@ -1,0 +1,14 @@
+.titulo2 {
+    padding: 0% 25%;
+    justify-content: center;
+}
+
+
+
+@media (max-width: 768px) {
+    .titulo2 {
+        padding: 5% 8%;
+        justify-content: center;
+    }
+
+}
