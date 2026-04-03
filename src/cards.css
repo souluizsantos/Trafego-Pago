@@ -1,17 +1,31 @@
-.sectioncard {
-    padding: 10% 0%;
-    justify-self: center;
+.cards-container {
+    display: flex;
+  justify-content: center;   /* centraliza os cards */
+  gap: 20px;                 /* espaço entre eles */
+  flex-wrap: wrap;           /* quebra linha em telas menores */
+  padding: 10% 10px;
+
     /* centraliza os cards */
 }
 
 .align-Cards {
-    display: inline-flex;
-    /* coloca os cards lado a lado */
-    width: 300px;
-    height: 400px;
-    background-color: #f5f5f5;
-    border-radius: 5%;
+  width: 300px;
+  height: 390px;
+  background-color: #f5f5f5;
+  border: 2px solid #00000033;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #7793825e;
+  text-align: left;
+  padding: 2px;
+  transition: all 0.3s ease; /* suaviza animação */
 }
+
+.align-Cards:hover {
+  transform: translateY(-10px); /* levanta o card */
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3); /* sombra mais forte */
+}
+
+
 
 .align-Cards {
 
@@ -54,13 +68,6 @@
 }
 
 @media (max-width:1000px) {
-    .sectioncard {
-        padding: 8% 3%;
-        justify-self: center;
-
-        /* centraliza os cards */
-
-    }
 
     .id {
         width: 1000px;
@@ -82,16 +89,14 @@
         padding: 8%;
     }
 
-    .sectioncard {
-        padding: 10%;
-        justify-self: center;
-        /* centraliza os cards */
+    .cards-container {
+        padding: 35% 0%;
     }
 
     .align-Cards {
         display: grid;
         /* coloca os cards lado a lado */
-        width: 400px;
+        width: 350px;
         height: 320px;
         justify-self: center;
         align-content: center;
