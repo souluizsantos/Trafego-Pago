@@ -10,6 +10,8 @@ section {
   position: absolute;
   left: 55%;
   top: 100px;
+
+  
 }
 
 a{
@@ -31,6 +33,13 @@ a{
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
+
+  border: 2px solid #ffffff33;
+    /* borda preta */
+    border-radius: 10px;
+
+    box-shadow: 0 0 15px #7793825e;
+    /* sombra projetada */
 }
 
 /* quando passa o mouse */
@@ -39,6 +48,7 @@ a{
   /* muda o fundo */
   color: #000;
   /* texto fica preto */
+  
 }
 
 
@@ -51,11 +61,30 @@ a{
 
   section {
 
-    padding: 5% 8%;
+    padding: 2% 8%;
     justify-content: center;
   }
 
   .img1 {
     width: 20%;
+  }
+}
+
+@media (max-width:1000px) {
+  section {
+    padding: 5% 15%;
+    justify-self: auto;
+    margin: 0;
+  }
+
+  .titulo2 {
+    width: 700px;
+  }
+
+  .img1 {
+    width: 20%;
+    justify-items: end;
+    left: 60%;
+  top: 100px;
   }
 }
