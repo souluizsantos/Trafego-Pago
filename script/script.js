@@ -1,9 +1,11 @@
+// Seleciona os elementos
 const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 
+// Adiciona o evento de clique
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active'); // anima o ícone
-  menu.classList.toggle('active');      // abre/fecha o menu
+    // Liga/Desliga a classe 'active' no menu
+    menu.classList.toggle('active');
 });
 
 document.addEventListener('mousemove', (e) => {

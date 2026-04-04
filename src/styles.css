@@ -1,5 +1,8 @@
 
-
+img {
+    max-width: 100%;
+    height: auto;
+}
 body {
     margin: 0;
     font-family: inter, sans-serif;
@@ -12,7 +15,7 @@ body {
 
 
 h1 {
-    font-size: 50px;
+    font-size: 3rem;
     width: 60%;
     text-align: start;
     
@@ -24,13 +27,16 @@ h1 {
      width: 60%;
  }
 
-footer{
-    text-align: center;
-    font-weight: 100;
-    font-size: 10px;
-    padding: 15px 0px;
-    background-color: #eeeeee;
 
+/* Rodapé Otimizado */
+footer {
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+    padding: 20px 0;
+    background-color: #0000000a;
+    margin-top: auto; /* Truque mágico: empurra o footer para o fim do 'flex' body */
 }
 
 iframe {
@@ -50,5 +56,9 @@ iframe {
      text-align: start;
      width: 100%;
  }
+
+ footer {
+        font-size: 10px;
+    }
 
 }

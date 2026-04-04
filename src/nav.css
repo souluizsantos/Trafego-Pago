@@ -1,116 +1,113 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-}
-
+/* Configuração Geral da Navbar */
 .navbar {
-  background: linear-gradient(90deg, #ffffffac, #fdfdfd);
   display: flex;
-  justify-content: space-between;
+  justify-content: start; /* lado e posição que ficará */
   align-items: center;
-  padding: 15px 2%;
- 
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
+  padding: 20px;
 }
-
-.logo {
-  color: #000000;
-  font-weight: bold;
-  font-size: 1.3em;
-  letter-spacing: 1px;
-}
-
+ .logo {
+  font-weight: 700;
+  font-size: larger;
+   padding: 0 8%;
+ }
 .menu {
   display: flex;
-  gap: 25px;
-}
-
-.menu a {
-  color: #000000;
-  text-decoration: none;
   font-weight: 600;
-  position: relative;
-  transition: color 0.3s ease;
 
+  padding: 0 8%;
+  gap: 30px;
   
+  text-align: center;
 }
 
+/* Container dos links */
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+/* O Link em si */
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative; /* Necessário para a linha se guiar por ele */
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* A Linha (Efeito) */
 .menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0%;
-  height: 2px;
-  background-color: #00ff66;
-  transition: width 0.3s ease;
-  
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Cola a linha na base do link */
+    width: 0;   /* Começa invisível */
+    height: 2px;
+    background-color: #00ff66; /* O verde da sua marca */
+    transition: width 0.3s ease; /* Faz a linha "crescer" suavemente */
 }
 
+/* Quando passa o mouse no link */
 .menu a:hover {
-  color: #000000;
+    color: #00ff66; /* Opcional: muda a cor do texto também */
 }
 
+/* Quando passa o mouse, a linha aparece */
 .menu a:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
-/* Hamburguer */
+/* Esconder o hamburger em ecrãs grandes */
 .hamburger {
   display: none;
-  flex-direction: column;
   cursor: pointer;
-  
+  flex-direction: column;
+  gap: 5px;
 }
 
 .hamburger span {
+  width: 30px;
   height: 3px;
-  width: 25px;
-  background: #000000;
-  margin: 4px 0;
-  transition: 0.3s;
+  background-color: #333;
 }
 
-/* Responsivo */
+/* Media Query para Telemóveis */
 @media (max-width: 768px) {
-  .menu {
-    display: none;
 
-    flex-direction: column;
-    background: #fdfdfd;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 90%;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.7);
-  }
-
-  .menu.active {
-    display: flex;
-    animation: slideDown 0.3s ease forwards;
-  }
-
+  /* Configuração Geral da Navbar */
+.navbar {
+  display: flex;
+  justify-content: end; /* lado e posição que ficará */
+  align-items: center;
+  padding: 5% 8%;
+}
   .hamburger {
     display: flex;
-    padding: 3% 3%;
-    margin: 2%;
+    /* Mostra o ícone no telemóvel */
   }
-  .logo {
-  color: #000000;
-  font-weight: bold;
-  font-size: 1.3em;
-  letter-spacing: 1px;
-  padding: 8%;
-}
-}
 
+  .menu {
+    display: none;
+    /* Esconde o menu original */
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 40%;
+    background-color: white;
+    text-align: start;
+    
+  }
 
-/* Animação suave */
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  /* Classe que o JavaScript vai ativar */
+  .menu.active {
+    display: flex;
+  }
+
+  .logo, .menu {
+   padding: 0 5%;
+ 
+}
 }

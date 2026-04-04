@@ -72,11 +72,12 @@ a{
 }
 
 
+
 @media (max-width:600px) {
 
   section {
 
-    padding: 2% 8%;
+    padding: 0 8%;
     justify-content: center;
   }
 

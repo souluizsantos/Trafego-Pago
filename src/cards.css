@@ -1,111 +1,38 @@
 .cards-container {
     display: flex;
-  justify-content: center;   /* centraliza os cards */
-  gap: 20px;                 /* espaço entre eles */
-  flex-wrap: wrap;           /* quebra linha em telas menores */
-  padding: 10% 10px;
-
-    /* centraliza os cards */
+    flex-wrap: wrap; /* Permite que os itens passem para a linha de baixo */
+    justify-content: center;
+    gap: 20px;
 }
 
 .align-Cards {
-  width: 300px;
-  height: 390px;
-  background-color: #f5f5f5;
-  border: 2px solid #00000033;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #7793825e;
-  text-align: left;
-  padding: 2px;
-  transition: all 0.3s ease; /* suaviza animação */
+    flex: 1 1 300px; /* Tenta manter 300px, mas cresce se houver espaço */
+    max-width: 100%;
+    padding: 5%;
+     background-color: #00000008;
+     box-shadow: #252525;
 }
 
+/* Efeito ao passar o mouse */
 .align-Cards:hover {
-  transform: translateY(-10px); /* levanta o card */
-  box-shadow: 0 15px 25px rgba(0,0,0,0.3); /* sombra mais forte */
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px #7a8e810a; /* Sombra na cor da sua marca */
+  border-color: #282828;
 }
 
-
-
-.align-Cards {
-
-    border: 2px solid #00000033;
-    /* borda preta */
-    border-radius: 10px;
-
-    box-shadow: 0 0 15px #7793825e;
-    /* sombra projetada */
-    text-align: left;
+/* Estilização dos títulos nos cards */
+.card h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #000;
+  text-transform: uppercase;
 }
 
-.card {
-    padding: 15% 37px;
-}
-
-.h1card {
-    font-weight: 900;
-}
-
-.h2card {
-
-    width: 100%;
-    text-align: start;
-
-}
-
-.pcard {
-    text-align: start;
-    width: 90%;
-}
-
-
-
-@media (max-width:3000px){
-    .id {
-        width: 1000px;
+@media (max-width: 480px) {
+    .card {
+        margin: 10px;
+        padding: 15px;
     }
-
-}
-
-@media (max-width:1000px) {
-
-    .id {
-        width: 1000px;
-    }
-
-    .align-Cards {
-        /* coloca os cards lado a lado */
-        width: 270px;
-        height: 410px;
-        justify-self: center;
-        background-color: #f5f5f5;
-        border-radius: 5%;
-    }
-}
-
-@media (max-width:600px) {
-
-    section {
-        padding: 8%;
-    }
-
-    .cards-container {
-        padding: 35% 0%;
-    }
-
-    .align-Cards {
-        display: grid;
-        /* coloca os cards lado a lado */
-        width: 350px;
-        height: 320px;
-        justify-self: center;
-        align-content: center;
-        background-color: #f5f5f5;
-        border-radius: 5%;
-    }
-
-    .id {
-        width: 100%;
-    }
-
 }
